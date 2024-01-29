@@ -1,9 +1,9 @@
 /*
-	Name: 
-	Copyright: 
-	Author: 
-	Date: 24/08/23 18:09
-	Description: 
+        Name:
+        Copyright:
+        Author:
+        Date: 24/08/23 18:09
+        Description:
 */
 #ifndef EXCEPTION
 #define EXCEPTION

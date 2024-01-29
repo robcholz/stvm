@@ -1,9 +1,9 @@
 /*
-	Name: SequenceType.cpp
-	Copyright: Apache 2.0
-	Author: Climber-Rong
-	Date: 14/08/23 10:19
-	Description: 数列数据类型的定义
+        Name: SequenceType.cpp
+        Copyright: Apache 2.0
+        Author: Climber-Rong
+        Date: 14/08/23 10:19
+        Description: 数列数据类型的定义
     * 也许你会对这种数据类型的名字感到困惑
     * 数列其实是数组和列表的结合
     * 数列可以在创建的时候就初始化长度，这点与类似Python的列表不同
@@ -14,24 +14,23 @@
 #ifndef SEQUENCETYPE_CPP
 #define SEQUeNCETYPE_CPP
 
-#include"DataType.hpp"
-#include"ArrayList.hpp"
+#include "ArrayList.hpp"
+#include "DataType.hpp"
 
 namespace stamon {
-	namespace datatype {
-		class SequenceType : public DataType {
-				ArrayList<Variable*> sequence;
-			public:
-				SequenceType(int length) : DataType(SequenceTypeID), sequence(ArrayList<Variable*>(length)) {
-				}
-				SequenceType(ArrayList<Variable*> value) : DataType(SequenceTypeID) {
-					sequence = value;
-				}
-				virtual ArrayList<Variable*> getVal() {
-					return sequence;
-				}
-		};
-	}
-}
+namespace datatype {
+class SequenceType : public DataType {
+  ArrayList<Variable*> sequence;
+
+ public:
+  SequenceType(int length)
+      : DataType(SequenceTypeID), sequence(ArrayList<Variable*>(length)) {}
+  SequenceType(ArrayList<Variable*> value) : DataType(SequenceTypeID) {
+    sequence = value;
+  }
+  virtual ArrayList<Variable*> getVal() { return sequence; }
+};
+}  // namespace datatype
+}  // namespace stamon
 
 #endif
